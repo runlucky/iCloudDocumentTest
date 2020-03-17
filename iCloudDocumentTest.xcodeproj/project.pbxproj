@@ -13,6 +13,8 @@
 		087FCE9524205C4F00465384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087FCE9424205C4F00465384 /* Assets.xcassets */; };
 		087FCE9824205C4F00465384 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087FCE9724205C4F00465384 /* Preview Assets.xcassets */; };
 		087FCE9B24205C4F00465384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 087FCE9924205C4F00465384 /* LaunchScreen.storyboard */; };
+		087FCEA424206A2700465384 /* ContainerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087FCEA324206A2700465384 /* ContainerManager.swift */; };
+		087FCEA624206CF900465384 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087FCEA524206CF800465384 /* Document.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		087FCE9724205C4F00465384 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		087FCE9A24205C4F00465384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		087FCE9C24205C4F00465384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		087FCEA2242060DD00465384 /* iCloudDocumentTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iCloudDocumentTest.entitlements; sourceTree = "<group>"; };
+		087FCEA324206A2700465384 /* ContainerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerManager.swift; sourceTree = "<group>"; };
+		087FCEA524206CF800465384 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 		087FCE8D24205C4A00465384 /* iCloudDocumentTest */ = {
 			isa = PBXGroup;
 			children = (
+				087FCEA2242060DD00465384 /* iCloudDocumentTest.entitlements */,
 				087FCE8E24205C4A00465384 /* AppDelegate.swift */,
 				087FCE9024205C4A00465384 /* SceneDelegate.swift */,
 				087FCE9224205C4A00465384 /* ContentView.swift */,
@@ -63,6 +69,8 @@
 				087FCE9924205C4F00465384 /* LaunchScreen.storyboard */,
 				087FCE9C24205C4F00465384 /* Info.plist */,
 				087FCE9624205C4F00465384 /* Preview Content */,
+				087FCEA324206A2700465384 /* ContainerManager.swift */,
+				087FCEA524206CF800465384 /* Document.swift */,
 			);
 			path = iCloudDocumentTest;
 			sourceTree = "<group>";
@@ -149,6 +157,8 @@
 				087FCE8F24205C4A00465384 /* AppDelegate.swift in Sources */,
 				087FCE9124205C4A00465384 /* SceneDelegate.swift in Sources */,
 				087FCE9324205C4A00465384 /* ContentView.swift in Sources */,
+				087FCEA424206A2700465384 /* ContainerManager.swift in Sources */,
+				087FCEA624206CF900465384 /* Document.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iCloudDocumentTest/iCloudDocumentTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iCloudDocumentTest/Preview Content\"";
 				DEVELOPMENT_TEAM = 89944GJ9HX;
@@ -304,6 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iCloudDocumentTest/iCloudDocumentTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iCloudDocumentTest/Preview Content\"";
 				DEVELOPMENT_TEAM = 89944GJ9HX;
