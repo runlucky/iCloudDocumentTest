@@ -28,27 +28,36 @@ class ContainerManager {
                     .appendingPathComponent("test.txt")
                 
                 Document(fileURL: url).save(to: url, for: .forCreating) { success in
-                    if success {
-                        print("test.txt 作成")
-                    } else {
-                        print("test.txt 作成失敗")
-                    }
+                    print(success ? "test.txt 作成" : "test.txt 作成失敗")
                 }
                 return
             }
             
-            let url = (query.results[0] as AnyObject).value(forAttribute: NSMetadataItemURLKey) as! URL
-            let document = Document(fileURL: url)
-            document.open { success in
-                if success {
-                    print(document.fileURL.absoluteString)
-                    print(document.text ?? "nil")
-                } else {
-                    print("ファイルオープンに失敗")
+            query.documents.forEach { document in
+                document.open { success in
+                    if success {
+                        print(document.fileURL.absoluteString)
+                        print(document.text ?? "nil")
+                        
+                        document.text = "上書きの値です"
+                    } else {
+                        print("ファイルオープンに失敗")
+                    }
                 }
             }
         }
        
         metadata.start()
+    }
+}
+
+extension NSMetadataQuery {
+    var documents: [Document] {
+        self.results.compactMap { result in
+            if let url = (result as AnyObject).value(forAttribute: NSMetadataItemURLKey) as? URL {
+                return Document(fileURL: url)
+            }
+            return nil
+        }
     }
 }

@@ -10,8 +10,14 @@ import Foundation
 import UIKit
 
 class Document: UIDocument {
-    var text: String? = "empty"
-    
+    var text: String? = "empty" {
+        didSet {
+            save(to: fileURL, for: .forOverwriting) { success in
+                print(success ? "上書き完了" : "上書き失敗")
+            }
+        }
+    }
+
     override func contents(forType typeName: String) throws -> Any {
         guard let text = text else {
             return Data()
