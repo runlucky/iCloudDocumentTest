@@ -22,7 +22,7 @@
 	<true/>
 	<key>NSUbiquitousContainers</key>
 	<dict>
-		<key>iCloud.kakeru.iCloudContainerTest</key>
+		<key>iCloud.kakeru.iCloudDocumentTest</key>
 		<dict>
 			<key>NSUbiquitousContainerIsDocumentScopePublic</key>
 			<true/>
